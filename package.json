@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TyranoPT/booking.git"
+    "url": "git+https://github.com/TiagoSousaDias/booking.git"
   },
-  "author": "Tiago Dias",
+  "author": "Tiago Sousa Dias",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TyranoPT/booking/issues"
+    "url": "https://github.com/TiagoSousaDias/booking/issues"
   },
-  "homepage": "https://github.com/TyranoPT/booking#readme"
+  "homepage": "https://github.com/TiagoSousaDias/booking#readme"
 }
