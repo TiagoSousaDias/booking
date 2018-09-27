@@ -1,0 +1,19 @@
+{
+  "name": "booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TyranoPT/booking.git"
+  },
+  "author": "Tiago Dias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TyranoPT/booking/issues"
+  },
+  "homepage": "https://github.com/TyranoPT/booking#readme"
+}
