@@ -5,23 +5,34 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
+const alojamento = require('./routes/alojamento');
 
 const app = express();
+const port = 3000;
 
-const connection = mysql.createConnection({
-  host     : database.host,
-  user     : database.user,
-  password :database.pass,
-  database : database.database,
-  port : database.port
+//cors middleware
+app.use(cors());
+
+//Static Folder
+app.use(express.static(path.join(__dirname,'public')));
+
+//bodyParser middleware
+app.use(bodyParser.json());
+
+/*app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'public/index.html'));
+});*/
+
+app.get('/',(req,res)=>{
+  res.send('HELLO');
 });
 
-connection.connect((err)=>{
+app.use('/alojamento',alojamento);
+
+app.listen(port,(err)=>{
   if(err){
     console.log(err);
+  }else{
+  console.log('Server connected to port:3000');
   }
-});
-connection.query('SELECT * From users', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results);
-});
+})
