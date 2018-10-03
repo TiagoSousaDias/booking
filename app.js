@@ -5,7 +5,6 @@ const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
-const alojamento = require('./routes/alojamento');
 
 const app = express();
 const port = 3000;
@@ -22,12 +21,9 @@ app.use(bodyParser.json());
 /*app.get('*',(req,res)=>{
   res.sendFile(path.join(__dirname,'public/index.html'));
 });*/
+//Define all Routes
+app.use('/',require('./routes/routes').router);
 
-app.get('/',(req,res)=>{
-  res.send('HELLO');
-});
-
-app.use('/alojamento',alojamento);
 
 app.listen(port,(err)=>{
   if(err){
