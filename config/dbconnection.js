@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const database = require('./database');
 
-const MyAppModel = mysql.createConnection({
+const connection = mysql.createPool({
   host     : database.host,
   user     : database.user,
   password : database.pass,
@@ -9,5 +9,4 @@ const MyAppModel = mysql.createConnection({
   port : database.port
 });
 
-
-module.exports = MyAppModel;
+module.exports = connection;

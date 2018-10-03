@@ -18,9 +18,9 @@ app.use(express.static(path.join(__dirname,'public')));
 //bodyParser middleware
 app.use(bodyParser.json());
 
-/*app.get('*',(req,res)=>{
+app.get('*',(req,res)=>{
   res.sendFile(path.join(__dirname,'public/index.html'));
-});*/
+});
 //Define all Routes
 app.use('/',require('./routes/routes').router);
 
@@ -29,6 +29,6 @@ app.listen(port,(err)=>{
   if(err){
     console.log(err);
   }else{
-  console.log('Server connected to port:3000');
+    console.log('Server connected to port:3000');
   }
 })

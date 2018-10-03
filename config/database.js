@@ -4,5 +4,4 @@ module.exports= {
     pass:'gg}SIB%xnOC,',
     database:'np1zf8rb_SD_Manager_Lusi',
     port:3306
-
 }
