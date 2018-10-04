@@ -18,12 +18,13 @@ app.use(express.static(path.join(__dirname,'public')));
 //bodyParser middleware
 app.use(bodyParser.json());
 
-app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname,'public/index.html'));
-});
+
 //Define all Routes
 app.use('/',require('./routes/routes').router);
 
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'public/index.html'));
+});
 
 app.listen(port,(err)=>{
   if(err){
