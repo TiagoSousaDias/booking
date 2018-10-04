@@ -1,10 +1,11 @@
 const db = require('../config/dbconnection');
 
-function getSlider(id,callback){
+module.exports.getSlider= (id,callback)=>{
   db.query('Select * from sliderimages where FKSlider = ? ',id,(error,results,fields)=>{
-    return callback(results);
+    var paths=[];
+    results.forEach(function(r){
+        paths.push(r.path);
+        });
+    return callback(paths);
   });
-}
-module.exports = {
-  getSlider:getSlider
 }

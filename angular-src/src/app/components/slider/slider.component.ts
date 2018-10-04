@@ -12,7 +12,8 @@ export class SliderComponent implements OnInit {
 
   ngOnInit() {
     this.imageService.getSlicer(1).subscribe(images=>{
-      this.images = images;
+      this.images = images.images;
+      console.log(  this.images[0]);
     },err =>{
     throw err;
       return false;
