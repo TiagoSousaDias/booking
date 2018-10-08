@@ -1,0 +1,7 @@
+.container.book{
+  height: 300px;
+  width: 100%;
+  margin:0;
+  padding: 0;
+  background: url('http://lusitaurus.com/Assets/img/quartos/IMG_1456.JPG') no-repeat;
+}
