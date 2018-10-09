@@ -1,7 +1,22 @@
-.container.book{
-  height: 300px;
+.container{
+height: 400px;
   width: 100%;
   margin:0;
   padding: 0;
+  max-width: 100%;
+}
+.book{
   background: url('http://lusitaurus.com/Assets/img/quartos/IMG_1456.JPG') no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+height: 400px
+}
+.bookText{
+   background-image: linear-gradient(to right, rgba(255,0,0,0),rgb(52, 74, 113,1),rgb(52, 74, 113,1));
+   height: 100%;
+}
+
+.row{
+    margin:0px;
 }
