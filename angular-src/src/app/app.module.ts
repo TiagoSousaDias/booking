@@ -10,6 +10,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { BookComponent } from './components/book/book.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
     {path:'',component: HomeComponent},
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     SliderComponent,
     BookComponent,
     TestimonialComponent,
-    GalleryComponent
+    GalleryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

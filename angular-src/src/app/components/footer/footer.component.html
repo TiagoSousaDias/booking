@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngIf="isHome;then homeFooter else footer">here is ignored</div>
+  <ng-template #homeFooter>content here...</ng-template>
+  <ng-template #footer>other content here...</ng-template>
+</div>
