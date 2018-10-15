@@ -1,0 +1,13 @@
+.row.book{
+  display: block;
+  background-image: url('/assets/img/2.jpg');
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+}

@@ -1,5 +1,5 @@
-<div class="container">
-  <div *ngIf="isHome;then homeFooter else footer">here is ignored</div>
+<div class="container-fluid footer">
+  <div *ngIf="isHome;then homeFooter else footer"></div>
   <ng-template #homeFooter>
     <div class="row justify-end-center" >
       <div class="col-md-4">
@@ -12,5 +12,32 @@
       </div>
     </div>
   </ng-template>
-  <ng-template #footer>other content here...</ng-template>
+  <ng-template #footer>
+    <div class="row justify-end-center">
+            <div class="col-md-4 col-sm-4 text-right">
+                 <ul class="quick-links">
+            		   		<li><a href="http://lusitaurus.com/lusitaurus"><i class="fa fa-angle-double-right"></i>Lusitaurus</a></li>
+            		   		<li><a href="http://lusitaurus.com/alojamento"><i class="fa fa-angle-double-right"></i>Alojamento </a></li>
+                 			<li><a href="http://lusitaurus.com/galeria"><i class="fa fa-angle-double-right"></i>Galeria </a></li>
+                   		<li><a href="http://lusitaurus.com/ginasio"><i class="fa fa-angle-double-right"></i>Ginásio</a></li>
+                      <li><a href="http://lusitaurus.com/contactos"><i class="fa fa-angle-double-right"></i>Contactos </a></li>
+                  </ul>
+            </div>
+            <div class="col-sm-2 col-md-4 text-center">
+                <a href="http://lusitaurus.com"><img src="http://lusitaurus.com/Assets/img/lusitaurusw.png" width="140" class="img-responsive"></a>
+            </div>
+            <div class="col-md-4 col-sm-6 footer-contacts ">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span"> Rua da Horta Abaixo , Quinta Ribeira Abaixo, </span>7200-051 Montoito, Portugal</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"> 266 597 209 | 968 551 921</p>
+                </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank">geral@lusitautus.com</a></p>
+                </div>
+            </div>
+
+        </div>
+  </ng-template>
 </div>
