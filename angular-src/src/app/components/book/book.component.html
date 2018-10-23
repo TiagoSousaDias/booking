@@ -1,12 +1,16 @@
-<div class="background-image"></div>
+<!--<div class="background-image"></div>-->
 <div class="row book">
   <div class="col-sm-12 col-md-4">
     <div class="jumbotron">
-
+      <input ng-Model="search" type="text"
+     placeholder="Filter by" autofocus>
     </div>
   </div>
   <div class="col-sm-12 col-md-8">
-    #list
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of alojamentos.alojamentos | filter: search">{{item.Nome}}</li>
+</ul>
+      <!--<li  ng-repeat="item in alojamentos.alojamentos | filter: search">{{Nome}}</li>-->
   </div>
 </div>
 <footer></footer>

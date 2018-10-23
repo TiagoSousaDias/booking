@@ -11,6 +11,7 @@ import { BookComponent } from './components/book/book.component';
 import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FilterPipe } from './services/filter.pipe';
 
 const appRoutes: Routes = [
     {path:'',component: HomeComponent},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     BookComponent,
     TestimonialComponent,
     GalleryComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

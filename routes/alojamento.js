@@ -1,12 +1,23 @@
 const express = require('express');
 const router = express.Router();
-const users =  require('../models/users');
+const Alojamento =  require('../models/alojamento');
 router.get('/',(req,res)=>{
-  console.log(users.GetAllUsers());
-  res.send('Rooms list');
+  Alojamento.GetAllRooms((err,results)=>{
+    res.json({
+      'alojamentos':results
+    });
+    console.log(results);
+  });
+//  res.send('Rooms list');
 });
 router.get('/:id',(req,res)=>{
-  console.log(users.getUserById(req.params.id));
-  res.send('Rooms nº');
+  Alojamento.GetRoomById(req.params.id,(err,results)=>{
+
+    res.json({
+      'quarto':results
+    });
+      console.log(results);
+
+  });
 });
 module.exports.router = router;
