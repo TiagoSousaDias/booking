@@ -7,7 +7,7 @@ const cors = require('cors');
 const passport = require('passport');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8080;
 
 //cors middleware
 app.use(cors());
